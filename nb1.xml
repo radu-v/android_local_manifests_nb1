@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <manifest>
-   <!-- <remote name="github" fetch="https://github.com" revision="lineage-17.1" /> -->
    <remote name="kernel" fetch="https://github.com" revision="treble" />
+   <remote name="github_master" fetch="https://github.com" revision="master" />
 
    <!-- Remove projects to replace remote later -->
    <remove-project name="LineageOS/android_build_soong" />
@@ -20,4 +20,7 @@
 
    <!-- Vendor -->
    <project path="vendor/nokia" name="GPUCode/proprietery_vendor_nokia" remote="github" />
+
+   <!-- Proton Clang -->
+   <project path="prebuilts/clang/host/linux-x86/proton-clang" name="kdrag0n/proton-clang" remote="github_master" />
 </manifest>
