@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<manifest>
+   <!-- <remote name="github" fetch="https://github.com" revision="lineage-17.1" /> -->
+   <remote name="kernel" fetch="https://github.com" revision="treble" />
+
+   <!-- Remove projects to replace remote later -->
+   <remove-project name="LineageOS/android_build_soong" />
+   <remove-project name="LineageOS/android_vendor_lineage" />
+
+   <!-- Replace remotes for removed projects -->
+   <project path="build/soong" name="radu-v/android_build_soong" remote="github" />
+   <project path="vendor/lineage" name="radu-v/android_vendor_lineage" remote="github" />
+
+   <!-- Device Trees -->
+   <project path="device/nokia/NB1" name="GPUCode/android_device_nokia_nb1" remote="github" />
+   <project path="device/nokia/msm8998-common" name="GPUCode/android_device_nokia_msm8998-common" remote="github" />
+
+   <!-- Kernel -->
+   <project path="kernel/nokia/umbrella-mod" name="radu-v/umbrella-mod" clone-depth="1" remote="kernel" />
+
+   <!-- Vendor -->
+   <project path="vendor/nokia" name="GPUCode/proprietery_vendor_nokia" remote="github" />
+</manifest>
