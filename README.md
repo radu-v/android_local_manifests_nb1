@@ -57,6 +57,13 @@ Some steps taken from [https://wiki.lineageos.org/devices/bacon/build](https://w
 
 1. source the environment
    `source build/envsetup.sh`
+   
+1. Turn on ccache to speed up build (can put this in .bashrc)
+   ```shell
+   export USE_CCACHE=1
+   export CCACHE_EXEC=/usr/bin/ccache
+   ```
+   and run `ccache -M 50G` to set max ccache size
 
 1. to build Lineage OS
    `lunch lineage_NB1-eng && clear && make -j8`
