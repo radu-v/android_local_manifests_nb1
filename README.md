@@ -67,6 +67,8 @@ Some steps taken from [https://wiki.lineageos.org/devices/bacon/build](https://w
 
 1. to build Lineage OS
    `lunch lineage_NB1-eng && clear && make -j8`
+   or
+   `brunch lineage_NB1-eng`
 
 1. to build only the kernel
    `m kernel`
