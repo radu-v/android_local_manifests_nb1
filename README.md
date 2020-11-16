@@ -53,10 +53,10 @@ Some steps taken from [https://wiki.lineageos.org/devices/bacon/build](https://w
    > ```
    * cloning each separately
    > ```shell
-   > git clone https://github.com/GPUCode/android_device_nokia_nb1.git device/nokia/NB1 -b lineage-17.1
-   > git clone https://github.com/GPUCode/android_device_nokia_msm8998-common.git device/nokia/msm8998-common -b lineage-17.1
-   > git clone https://github.com/GPUCode/proprietery_vendor_nokia.git vendor/nokia
-   > git clone https://github.com/resident-nokia/umbrella.git kernel/nokia/umbrella -b treble
+   > git clone -b lineage-17.1 https://github.com/GPUCode/android_device_nokia_nb1.git device/nokia/NB1
+   > git clone -b lineage-17.1 https://github.com/GPUCode/android_device_nokia_msm8998-common.git device/nokia/msm8998-common
+   > git clone -b lineage-17.1 https://github.com/GPUCode/proprietery_vendor_nokia.git vendor/nokia
+   > git clone -b treble --recurse-submodules https://github.com/resident-nokia/umbrella.git kernel/nokia/umbrella
    > ```
 
 1. Download the source code
