@@ -75,9 +75,9 @@ Some steps taken from [https://wiki.lineageos.org/devices/bacon/build](https://w
    and run `ccache -M 50G` to set max ccache size
 
 1. to build Lineage OS
-   `lunch lineage_NB1-eng && clear && make -j8`
+   `lunch havoc_NB1-eng && clear && make -j8`
    or
-   `brunch lineage_NB1-eng`
+   `brunch havoc_NB1-eng`
 
 1. to build only the kernel
    `m kernel`
