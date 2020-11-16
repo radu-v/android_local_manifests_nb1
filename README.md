@@ -43,12 +43,21 @@ Some steps taken from [https://wiki.lineageos.org/devices/bacon/build](https://w
    cd ~/android/lineage
    repo init -u https://github.com/LineageOS/android.git -b lineage-17.1
    ```
-1. Clone local manifests for NB1.
-   This contains project definitions for the device tree, kernel, customised
-   projects and Proton Clang.
-   ```shell
-   git clone https://github.com/radu-v/android_local_manifests_nb1.git .repo/local_manifests -b lineage-17.1
-   ```
+
+1. Clone device tree and vendor by either
+   * using local_manifests.xml
+   > This contains project definitions for the device tree, kernel, customised
+   > projects and Proton Clang.
+   > ```shell
+   > git clone https://github.com/radu-v/android_local_manifests_nb1.git .repo/local_manifests -b lineage-17.1
+   > ```
+   * cloning each separately
+   > ```shell
+   > git clone https://github.com/GPUCode/android_device_nokia_nb1.git device/nokia/NB1 -b havoc-ten
+   > git clone https://github.com/GPUCode/android_device_nokia_msm8998-common.git device/nokia/msm8998-common -b havoc-ten
+   > git clone https://github.com/GPUCode/proprietery_vendor_nokia.git vendor/nokia
+   > git clone https://github.com/resident-nokia/umbrella.git kernel/nokia/umbrella -b treble
+   > ```
 
 1. Download the source code
    ```shell
