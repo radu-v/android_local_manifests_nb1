@@ -13,7 +13,7 @@ Some steps taken from [https://wiki.lineageos.org/devices/bacon/build](https://w
 1. Create directories
    ```shell
    mkdir -p ~/bin
-   mkdir -p ~/android/lineage
+   mkdir -p ~/android/crDroid
    ```
 
 1. Install the repo command
@@ -40,12 +40,12 @@ Some steps taken from [https://wiki.lineageos.org/devices/bacon/build](https://w
 
 1. Initialize the LineageOS source repository
    ```shell
-   cd ~/android/lineage
-   repo init -u https://github.com/LineageOS/android.git -b lineage-17.1
+   cd ~/android/crDroid
+   repo init -u https://github.com/crdroidandroid/android.git -b 11.0
    ```
 
 1. Clone device tree and vendor by either
-   * using local_manifests.xml
+   * using local_manifests.xml (not updated)
    > This contains project definitions for the device tree, kernel, customised
    > projects and Proton Clang.
    > ```shell
@@ -53,10 +53,10 @@ Some steps taken from [https://wiki.lineageos.org/devices/bacon/build](https://w
    > ```
    * cloning each separately
    > ```shell
-   > git clone -b lineage-17.1 https://github.com/GPUCode/android_device_nokia_nb1.git device/nokia/NB1
-   > git clone -b lineage-17.1 https://github.com/GPUCode/android_device_nokia_msm8998-common.git device/nokia/msm8998-common
-   > git clone -b lineage-17.1 https://github.com/GPUCode/proprietery_vendor_nokia.git vendor/nokia
-   > git clone -b treble --recurse-submodules https://github.com/resident-nokia/umbrella.git kernel/nokia/umbrella
+   > git clone -b lineage-18.1 https://github.com/GPUCode/android_device_nokia_nb1.git device/nokia/NB1
+   > git clone -b lineage-18.1 https://github.com/GPUCode/android_device_nokia_msm8998-common.git device/nokia/msm8998-common
+   > git clone -b lineage-18.1 https://github.com/GPUCode/proprietery_vendor_nokia.git vendor/nokia
+   > git clone -b lineage-18.1 https://github.com/GPUCode/android_kernel_nokia_msm8998/ kernel/nokia/android_kernel_nokia_msm8998
    > ```
 
 1. Download the source code
@@ -74,10 +74,10 @@ Some steps taken from [https://wiki.lineageos.org/devices/bacon/build](https://w
    ```
    and run `ccache -M 50G` to set max ccache size
 
-1. to build Lineage OS
-   `lunch lineage_NB1-eng && clear && make -j8`
+1. to build crDroid
+   `lunch NB1 && clear && make -j8`
    or
-   `brunch lineage_NB1-eng`
+   `brunch NB1`
 
 1. to build only the kernel
    `m kernel`
