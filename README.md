@@ -56,7 +56,7 @@ Some steps taken from [https://wiki.lineageos.org/devices/bacon/build](https://w
    > git clone -b lineage-18.1 https://github.com/GPUCode/android_device_nokia_nb1.git device/nokia/NB1
    > git clone -b lineage-18.1 https://github.com/GPUCode/android_device_nokia_msm8998-common.git device/nokia/msm8998-common
    > git clone -b lineage-18.1 https://github.com/GPUCode/proprietery_vendor_nokia.git vendor/nokia
-   > git clone -b lineage-18.1 https://github.com/GPUCode/android_kernel_nokia_msm8998/ kernel/nokia/android_kernel_nokia_msm8998
+   > git clone -b lineage-18.1 https://github.com/GPUCode/android_kernel_nokia_msm8998/ kernel/nokia/msm8998
    > ```
 
 1. Download the source code
