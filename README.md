@@ -79,5 +79,11 @@ Some steps taken from [https://wiki.lineageos.org/devices/bacon/build](https://w
    or
    `brunch NB1`
 
+1. to only setup the env for building separate modules/directories
+   `breakfast NB1`
+   
+1. to build a directory
+   `mmma -j8 path`
+
 1. to build only the kernel
    `m kernel`
