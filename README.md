@@ -45,13 +45,6 @@ Some steps taken from [https://wiki.lineageos.org/devices/bacon/build](https://w
    ```
 
 1. Clone device tree and vendor by either
-   * using local_manifests.xml (not updated)
-   > This contains project definitions for the device tree, kernel, customised
-   > projects and Proton Clang.
-   > ```shell
-   > git clone https://github.com/radu-v/android_local_manifests_nb1.git .repo/local_manifests -b lineage-17.1
-   > ```
-   * cloning each separately
    > ```shell
    > git clone -b lineage-18.1 https://github.com/GPUCode/android_device_nokia_nb1.git device/nokia/NB1
    > git clone -b lineage-18.1 https://github.com/GPUCode/android_device_nokia_msm8998-common.git device/nokia/msm8998-common
@@ -62,6 +55,10 @@ Some steps taken from [https://wiki.lineageos.org/devices/bacon/build](https://w
 1. Download the source code
    ```shell
    repo sync -c
+   ```
+   to update:
+   ```shell
+   repo sync -c --force-sync --no-tags --no-clone-bundle
    ```
 
 1. source the environment
