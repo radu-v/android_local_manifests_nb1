@@ -75,6 +75,12 @@ To update the repo
    repo sync -c --force-sync --no-tags --no-clone-bundle -j8
    ```
 
+For a "dirty" build, after a successful one
+-------------------------------------------
+   ```bash
+   source build/envsetup.sh && mka installclean && brunch lineage_NB1-eng
+   ```
+
 To build a directory
 --------------------
    ```bash
